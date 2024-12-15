@@ -64,6 +64,7 @@ h1 {
     letter-spacing: -1px; /* Tighter letter spacing for modern look */
     background: linear-gradient(to right, #5a6aff, #4054e4);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 5px 15px rgba(90, 106, 255, 0.2);
 }
@@ -211,7 +212,6 @@ body.dark-mode .form-control {
     content: "Selected file: ";
     font-weight: bold;
 }
-
 
 body.dark-mode .form-control:focus {
     border-color: #4054e4;
