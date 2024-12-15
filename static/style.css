@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #5a6aff;
+    --secondary-color: #4054e4;
+    --background-color: #f4f6f9;
+    --text-color: #333;
+    --dark-background-color: #121212;
+    --dark-text-color: #fff;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+    background: linear-gradient(135deg, #343a40 0%, #2f343a 100%);
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode a {
+    color: #bb86fc;
+}
+
+body.dark-mode button {
+    background-color: #3700b3;
+    color: var(--dark-text-color);
+}
+
+.container {
+    max-width: 700px; /* Increased width */
+    width: 100%;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .container {
+    background-color: #343a40;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 800; /* Extra bold */
+    font-size: 2.5rem; /* Larger font size */
+    letter-spacing: -1px; /* Tighter letter spacing for modern look */
+    background: linear-gradient(to right, #5a6aff, #4054e4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(90, 106, 255, 0.2);
+}
+
+body.dark-mode h1 {
+    background: linear-gradient(to right, #4054e4, #5a6aff);
+    -webkit-text-fill-color: #fff;
+    text-shadow: 0 5px 15px rgba(64, 84, 228, 0.5);
+}
+
+.file-uploader {
+    position: relative;
+    border: 2px dashed var(--primary-color); /* Slightly thicker border */
+    border-radius: 20px; /* More rounded */
+    background-color: #f9faff;
+    padding: 80px 50px; /* Increased padding for larger area */
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 40px rgba(90, 106, 255, 0.1); /* Larger shadow */
+    width: calc(100% - 40px); /* Ensure it takes up full width with margins */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body.dark-mode .file-uploader {
+    border: 2px dashed #4054e4;
+    background-color: #2f343a;
+    box-shadow: 0 15px 40px rgba(64, 84, 228, 0.5);
+}
+
+.file-uploader:hover {
+    border-color: var(--secondary-color);
+    background-color: #f0f3ff;
+    transform: scale(1.03); /* Slightly larger scale effect on hover */
+}
+
+body.dark-mode .file-uploader:hover {
+    border-color: #5a6aff;
+    background-color: #343a40;
+}
+
+.file-uploader input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px; /* Larger padding */
+    border-radius: 10px; /* More rounded button */
+    font-weight: 600;
+    font-size: 1.2rem; /* Slightly larger text */
+    transition: all 0.3s ease;
+    box-shadow: 0 12px 30px rgba(90, 106, 255, 0.3); /* Larger shadow */
+    cursor: pointer; 
+}
+
+body.dark-mode .upload-button {
+    background-color: #4054e4;
+    box-shadow: 0 12px 30px rgba(64, 84, 228, 0.5);
+}
+
+.upload-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(90, 106, 255, 0.4);
+}
+
+body.dark-mode .upload-button:hover {
+    background-color: #5a6aff;
+    box-shadow: 0 15px 35px rgba(90, 106, 255, 0.5);
+}
+
+.upload-text {
+    color: #7a8aa0;
+    margin-top: 20px;
+    font-size: 1.1rem; /* Slightly larger text */
+    opacity: 0.7;
+}
+
+body.dark-mode .upload-text {
+    color: #b4b7bf;
+    opacity: 0.8;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 18px;
+    border-radius: 40px;
+    background-color: var(--primary-color);
+    border: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(90, 106, 255, 0.3);
+}
+
+body.dark-mode .btn-primary {
+    background-color: #4054e4;
+    box-shadow: 0 10px 30px rgba(64, 84, 228, 0.5);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(90, 106, 255, 0.4);
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #5a6aff;
+    box-shadow: 0 15px 35px rgba(90, 106, 255, 0.5);
+}
+
+.form-control {
+    border-radius: 30px;
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .form-control {
+    border: 2px solid #343a40;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(90, 106, 255, 0.25);
+}
+
+.file-uploader.upload-text {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.file-uploader.upload-text::before {
+    content: "Selected file: ";
+    font-weight: bold;
+}
+
+
+body.dark-mode .form-control:focus {
+    border-color: #4054e4;
+    box-shadow: 0 0 0 0.2rem rgba(64, 84, 228, 0.25);
+}
